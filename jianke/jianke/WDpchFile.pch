@@ -1,0 +1,129 @@
+//
+//  WDpchFile.pch
+//  jianke
+//
+//  Created by xiaomk on 15/9/8.
+//  Copyright (c) 2015年 xianshijian. All rights reserved.
+//
+
+#ifndef jianke_WDpchFile_pch
+#define jianke_WDpchFile_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Availability.h>
+
+/** 日志 */
+#ifdef DEBUG
+#   define DLog(...) NSLog(@"%s, line:%d, log:%@", __func__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
+#   define ELog(fmt, ...) NSLog((@"[Elog] " fmt), ##__VA_ARGS__);
+#   define DebugStatus YES
+#else
+#   define DLog(...)
+#   define ELog(...)
+#   define DebugStatus NO
+#endif
+
+
+#ifndef TARGET_OS_IOS
+    #define TARGET_OS_IOS TARGET_OS_IPHONE
+#endif
+
+#ifndef TARGET_OS_WATCH
+    #define TARGET_OS_WATCH 0
+#endif
+
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
+    #ifndef __IPHONE_6_0
+        #warning "This project uses features only available in iPhone SDK 6.0 and later."
+    #endif
+
+    #ifdef __OBJC__
+        #import <UIKit/UIKit.h>
+        #import <Foundation/Foundation.h>
+        #import <SystemConfiguration/SystemConfiguration.h>
+        #import <MobileCoreServices/MobileCoreServices.h>
+//        #import "CodeObfuscation.h"
+    #endif
+#else
+    #ifdef __OBJC__
+        #import <Cocoa/Cocoa.h>
+        #import <SystemConfiguration/SystemConfiguration.h>
+        #import <AssertMacros.h>
+        #import <CoreServices/CoreServices.h>
+    #endif
+#endif
+
+
+//====================================================================================================
+#define iPhone6                                                                 \
+    ([UIScreen instancesRespondToSelector:@selector(currentMode)]               \
+        ? CGSizeEqualToSize(CGSizeMake(750, 1334),                              \
+                            [[UIScreen mainScreen] currentMode].size)           \
+        : NO)
+#define iPhone6Plus                                                             \
+    ([UIScreen instancesRespondToSelector:@selector(currentMode)]               \
+        ? CGSizeEqualToSize(CGSizeMake(1242, 2208),                             \
+                            [[UIScreen mainScreen] currentMode].size)           \
+        : NO)
+
+/** 通知 */
+#define WDNotificationCenter [NSNotificationCenter defaultCenter]
+#define WDUserDefaults       [NSUserDefaults standardUserDefaults]
+
+/** 颜色 */
+#define MKCOLOR_RGB(r, g, b) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:1]
+#define MKCOLOR_RGBA(r, g, b, a) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:(a)]
+
+/** 屏幕宽高 */
+#define SCREEN_WIDTH     [[UIScreen mainScreen]bounds].size.width
+#define SCREEN_HEIGHT    [[UIScreen mainScreen]bounds].size.height
+#define SCREEN_SIZE      [UIScreen mainScreen].bounds.size
+#define SCREEN_BOUNDS    [UIScreen mainScreen].bounds
+
+#define MKSCREEN_WIDTH     [UIScreen mainScreen].bounds.size.width
+#define MKSCREEN_HEIGHT    [UIScreen mainScreen].bounds.size.height
+#define MKSCREEN_BOUNDS    [UIScreen mainScreen].bounds
+
+/** 单例*/
+#define Impl_SharedInstance(type) + (instancetype)sharedInstance {\
+static type *sharedInstance = nil;\
+static dispatch_once_t once;\
+dispatch_once(&once, ^{\
+sharedInstance = [[self alloc] init];\
+});\
+return sharedInstance;\
+}
+
+
+
+#define MKDispatch_main_sync_safe(block)\
+    if ([NSThread isMainThread]) {\
+        block();\
+    } else {\
+        dispatch_sync(dispatch_get_main_queue(), block);\
+    }
+
+#define MKDispatch_main_async_safe(block)\
+    if ([NSThread isMainThread]) {\
+        block();\
+    } else {\
+        dispatch_async(dispatch_get_main_queue(), block);\
+    }
+
+#define WDUsed(p) if(p);
+
+// block self
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+#define MKBlockExec(block, ...) if (block) { block(__VA_ARGS__); };
+typedef void (^MKBlock)(id result);
+typedef void (^MKIntegerBlock)(NSInteger result);
+typedef void (^MKBoolBlock)(BOOL bRet);
+typedef void (^MKDoubleBlock)(id result1, id result2);
+
+
+#define MKActionSheetDefine
+#define nib(a) [UINib nibWithNibName:a bundle:nil]
+#endif

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKC-yM-tCb">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_lanuch_icon" translatesAutoresizingMaskIntoConstraints="NO" id="7Ea-4r-Krx">
+                            <rect key="frame" x="253" y="139" width="94" height="122"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v3.3.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNo-2J-uHH">
+                            <rect key="frame" x="282.5" y="561.5" width="35" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="SNo-2J-uHH" secondAttribute="bottom" constant="24" id="Fb7-8O-Dii"/>
+                        <constraint firstItem="SNo-2J-uHH" firstAttribute="centerX" secondItem="YKC-yM-tCb" secondAttribute="centerX" id="I7b-f5-P1z"/>
+                        <constraint firstItem="7Ea-4r-Krx" firstAttribute="centerY" secondItem="YKC-yM-tCb" secondAttribute="centerY" constant="-100" id="pNk-yb-V7q"/>
+                        <constraint firstItem="7Ea-4r-Krx" firstAttribute="centerX" secondItem="YKC-yM-tCb" secondAttribute="centerX" id="wiP-kI-TyM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YKC-yM-tCb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0Ct-UB-8ee"/>
+                <constraint firstAttribute="trailing" secondItem="YKC-yM-tCb" secondAttribute="trailing" id="BEw-Qb-pyC"/>
+                <constraint firstAttribute="bottom" secondItem="YKC-yM-tCb" secondAttribute="bottom" id="Fip-Ne-4Yg"/>
+                <constraint firstItem="YKC-yM-tCb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nSJ-ie-LOE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="548" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_lanuch_icon" width="94" height="122"/>
+    </resources>
+</document>

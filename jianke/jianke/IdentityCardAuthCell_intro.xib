@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="MLD-Rc-QQN">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MLD-Rc-QQN" id="Qom-9S-2R9">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v250_attention" translatesAutoresizingMaskIntoConstraints="NO" id="5on-Sr-Trh">
+                        <rect key="frame" x="20" y="8" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="14W-NI-zuZ"/>
+                            <constraint firstAttribute="width" constant="16" id="wsv-GJ-Yo6"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Y89-KY-Gmc">
+                        <rect key="frame" x="44" y="8" width="540" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="550" id="Z2v-iw-gLS"/>
+                        </constraints>
+                        <string key="text">手持身份证正脸照请务必确保脸部和身份证照片信息清晰可见哦~
+由于正规企业的财务要求，您的身份证号可能开放给雇主，用于提供薪资支付凭证。</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Z2v-iw-gLS"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Y89-KY-Gmc" secondAttribute="trailing" constant="16" id="1It-bC-N7d"/>
+                    <constraint firstItem="5on-Sr-Trh" firstAttribute="leading" secondItem="Qom-9S-2R9" secondAttribute="leading" constant="20" id="7Qr-Gn-1N8"/>
+                    <constraint firstItem="5on-Sr-Trh" firstAttribute="top" secondItem="Qom-9S-2R9" secondAttribute="top" constant="8" id="FaY-Je-d2A"/>
+                    <constraint firstItem="Y89-KY-Gmc" firstAttribute="top" secondItem="5on-Sr-Trh" secondAttribute="top" id="L77-up-deX"/>
+                    <constraint firstItem="Y89-KY-Gmc" firstAttribute="leading" secondItem="5on-Sr-Trh" secondAttribute="trailing" constant="8" id="VPz-ev-Ypc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="406" y="306"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="v250_attention" width="24" height="24"/>
+    </resources>
+</document>

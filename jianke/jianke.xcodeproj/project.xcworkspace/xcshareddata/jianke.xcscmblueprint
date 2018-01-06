@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D6365F596606FAB3EEBD44BD2CE1DE57EC440623",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D6365F596606FAB3EEBD44BD2CE1DE57EC440623" : 9223372036854775807,
+    "809546FFD09FD61869C5B9487BB059B8DD2C8188" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AF5B18AF-FA65-4682-873A-A7CCC57B0A43",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D6365F596606FAB3EEBD44BD2CE1DE57EC440623" : "jiankejianzhi-dev\/",
+    "809546FFD09FD61869C5B9487BB059B8DD2C8188" : "jianke\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "jianke",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "jianke\/jianke.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xwmltw\/jianke.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "809546FFD09FD61869C5B9487BB059B8DD2C8188"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "code.csdn.net:u010039064\/jkhire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D6365F596606FAB3EEBD44BD2CE1DE57EC440623"
+    }
+  ]
+}

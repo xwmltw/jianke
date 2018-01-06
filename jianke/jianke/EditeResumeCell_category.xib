@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="EditeResumeCell_category">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="379" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人员类别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oj-Q6-jqZ">
+                        <rect key="frame" x="16" y="16" width="49.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YN-if-hPK">
+                        <rect key="frame" x="16" y="37.5" width="61" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title=" 学生" image="frequent_icon_black_selected">
+                            <color key="titleColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="btnStuedentOnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Sdf-GH-Re0"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5z-AK-RXy">
+                        <rect key="frame" x="117" y="37.5" width="94" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title=" 社会人士" image="frequent_icon_black_selected">
+                            <color key="titleColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="btnSocailOnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PSY-Id-8FP"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8YN-if-hPK" firstAttribute="top" secondItem="4oj-Q6-jqZ" secondAttribute="bottom" constant="7" id="AeJ-Zc-Yg8"/>
+                    <constraint firstItem="r5z-AK-RXy" firstAttribute="centerY" secondItem="8YN-if-hPK" secondAttribute="centerY" id="VqS-Ca-JtF"/>
+                    <constraint firstItem="4oj-Q6-jqZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="hE9-IC-8Nf"/>
+                    <constraint firstItem="8YN-if-hPK" firstAttribute="leading" secondItem="4oj-Q6-jqZ" secondAttribute="leading" id="hQz-Sc-naW"/>
+                    <constraint firstItem="r5z-AK-RXy" firstAttribute="leading" secondItem="8YN-if-hPK" secondAttribute="trailing" constant="40" id="hwm-dI-3VO"/>
+                    <constraint firstItem="4oj-Q6-jqZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jVr-kx-LF0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnSocail" destination="r5z-AK-RXy" id="YPF-UB-PN7"/>
+                <outlet property="btnStudent" destination="8YN-if-hPK" id="BqH-w9-lOf"/>
+            </connections>
+            <point key="canvasLocation" x="54.5" y="65"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="frequent_icon_black_selected" width="24" height="24"/>
+    </resources>
+</document>

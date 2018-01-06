@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="232" id="KGk-i7-Jjw" customClass="JobDetailCell_introduce">
+            <rect key="frame" x="0.0" y="0.0" width="631" height="232"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="631" height="231"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兼职描述:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwM-ha-GgI">
+                        <rect key="frame" x="16" y="16" width="74" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="74" id="GPa-ca-7Kp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="a7z-rd-1Rq" userLabel="岗位描述">
+                        <rect key="frame" x="16" y="42" width="599" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4J-uL-uQ8">
+                        <rect key="frame" x="0.0" y="127" width="631" height="104"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB5-qN-Rq3">
+                                <rect key="frame" x="257" y="16" width="116" height="38"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="0.029999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="XVK-at-uv7"/>
+                                    <constraint firstAttribute="height" constant="38" id="ih8-1F-ad6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="-40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="90" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="展开描述" image="jiantou_down_icon_16">
+                                    <color key="titleColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rB5-qN-Rq3" firstAttribute="centerX" secondItem="O4J-uL-uQ8" secondAttribute="centerX" id="7gy-GP-znj"/>
+                            <constraint firstItem="rB5-qN-Rq3" firstAttribute="top" secondItem="O4J-uL-uQ8" secondAttribute="top" constant="16" id="8P2-gK-Oza"/>
+                            <constraint firstAttribute="height" constant="104" id="fhY-eH-zLI"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提示：凡收取费用的兼职，需谨慎！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zce-gf-Y9c">
+                        <rect key="frame" x="24" y="190" width="245" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.3803921569" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="iwM-ha-GgI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="4bl-um-coh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Zce-gf-Y9c" secondAttribute="bottom" constant="16" id="Cya-GZ-iGu"/>
+                    <constraint firstItem="Zce-gf-Y9c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="G95-x1-RQf"/>
+                    <constraint firstItem="a7z-rd-1Rq" firstAttribute="top" secondItem="iwM-ha-GgI" secondAttribute="bottom" constant="8" id="Ir9-4H-xb4"/>
+                    <constraint firstItem="iwM-ha-GgI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Jhm-u8-M9u"/>
+                    <constraint firstAttribute="bottom" secondItem="O4J-uL-uQ8" secondAttribute="bottom" id="SWp-69-Nwc"/>
+                    <constraint firstAttribute="trailing" secondItem="O4J-uL-uQ8" secondAttribute="trailing" id="XZX-5t-M4f"/>
+                    <constraint firstItem="a7z-rd-1Rq" firstAttribute="leading" secondItem="iwM-ha-GgI" secondAttribute="leading" id="bQD-wC-Ke5"/>
+                    <constraint firstAttribute="trailing" secondItem="a7z-rd-1Rq" secondAttribute="trailing" constant="16" id="gaN-ig-hrg"/>
+                    <constraint firstItem="O4J-uL-uQ8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rKo-zR-Nef"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnMore" destination="rB5-qN-Rq3" id="YUM-Qg-bX0"/>
+                <outlet property="labJobDetail" destination="a7z-rd-1Rq" id="8D0-8j-upP"/>
+                <outlet property="viewMore" destination="O4J-uL-uQ8" id="0gB-9V-qhW"/>
+                <outlet property="warnLab" destination="Zce-gf-Y9c" id="K0Z-oT-9om"/>
+            </connections>
+            <point key="canvasLocation" x="409.5" y="415"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="jiantou_down_icon_16" width="12" height="8"/>
+    </resources>
+</document>

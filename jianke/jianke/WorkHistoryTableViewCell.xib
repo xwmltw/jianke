@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoSlab-Regular.ttf">
+            <string>RobotoSlab-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkHistoryTableViewCell" rowHeight="98" id="KGk-i7-Jjw" customClass="WorkHistoryTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="592" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="592" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="满记甜品新品试吃会礼仪" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="vjP-oN-KOj">
+                        <rect key="frame" x="80" y="10" width="496" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="三坊七巷南后街" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="tUK-qX-NIG">
+                        <rect key="frame" x="80" y="69.5" width="496" height="18.5"/>
+                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="14"/>
+                        <color key="textColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="0.47999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6KW-Pr-jhb">
+                        <rect key="frame" x="39" y="0.0" width="2" height="43"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="kZr-Ul-e61"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5j-xJ-cEs">
+                        <rect key="frame" x="39" y="55" width="2" height="42"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.96862745098039216" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="grG-Fm-iTP"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roW-Rh-rJz">
+                        <rect key="frame" x="34" y="43" width="12" height="12"/>
+                        <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="0e3-Qy-zCh"/>
+                            <constraint firstAttribute="height" constant="12" id="678-Os-z4N"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRc-DF-VHx">
+                        <rect key="frame" x="27" y="36" width="26" height="26"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="SiQ-hm-M9K">
+                                <rect key="frame" x="2" y="5" width="23" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="Elz-5L-h2J"/>
+                            <constraint firstItem="SiQ-hm-M9K" firstAttribute="centerY" secondItem="xRc-DF-VHx" secondAttribute="centerY" id="PhQ-N7-kCE"/>
+                            <constraint firstAttribute="width" constant="26" id="mbI-yf-a1R"/>
+                            <constraint firstItem="SiQ-hm-M9K" firstAttribute="centerX" secondItem="xRc-DF-VHx" secondAttribute="centerX" id="x8Q-iu-HdN"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="9/12" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="4Tf-qD-CEA">
+                        <rect key="frame" x="80" y="45" width="27.5" height="18.5"/>
+                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="14"/>
+                        <color key="textColor" red="0.1333333333" green="0.2274509804" blue="0.31372549020000001" alpha="0.47999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6KW-Pr-jhb" firstAttribute="centerX" secondItem="L5j-xJ-cEs" secondAttribute="centerX" id="2t4-VT-7qE"/>
+                    <constraint firstItem="6KW-Pr-jhb" firstAttribute="bottom" secondItem="roW-Rh-rJz" secondAttribute="top" id="4G6-eh-8eT"/>
+                    <constraint firstItem="roW-Rh-rJz" firstAttribute="centerY" secondItem="xRc-DF-VHx" secondAttribute="centerY" id="6MN-62-heN"/>
+                    <constraint firstItem="4Tf-qD-CEA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="Bem-hb-Nbz"/>
+                    <constraint firstAttribute="bottom" secondItem="L5j-xJ-cEs" secondAttribute="bottom" id="Fb3-Hi-Xoh"/>
+                    <constraint firstItem="xRc-DF-VHx" firstAttribute="centerX" secondItem="L5j-xJ-cEs" secondAttribute="centerX" id="FxZ-xx-eR2"/>
+                    <constraint firstItem="6KW-Pr-jhb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gwe-ng-4wL"/>
+                    <constraint firstItem="vjP-oN-KOj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="H09-4W-WxH"/>
+                    <constraint firstItem="xRc-DF-VHx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JWE-Uc-AJv"/>
+                    <constraint firstItem="vjP-oN-KOj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="L3U-NU-JCY"/>
+                    <constraint firstItem="L5j-xJ-cEs" firstAttribute="top" secondItem="roW-Rh-rJz" secondAttribute="bottom" id="NJA-Nf-iRJ"/>
+                    <constraint firstItem="roW-Rh-rJz" firstAttribute="centerX" secondItem="xRc-DF-VHx" secondAttribute="centerX" id="PiH-kZ-Ryp"/>
+                    <constraint firstAttribute="bottom" secondItem="tUK-qX-NIG" secondAttribute="bottom" constant="10" id="VDr-HM-Xbb"/>
+                    <constraint firstItem="L5j-xJ-cEs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="39" id="eSf-Yw-m3c"/>
+                    <constraint firstItem="4Tf-qD-CEA" firstAttribute="top" secondItem="vjP-oN-KOj" secondAttribute="bottom" constant="6" id="fHE-z6-jkQ"/>
+                    <constraint firstItem="tUK-qX-NIG" firstAttribute="leading" secondItem="4Tf-qD-CEA" secondAttribute="leading" id="hfd-au-ZSK"/>
+                    <constraint firstAttribute="trailing" secondItem="tUK-qX-NIG" secondAttribute="trailing" constant="16" id="kWH-Oo-LPb"/>
+                    <constraint firstAttribute="trailing" secondItem="vjP-oN-KOj" secondAttribute="trailing" constant="16" id="qTX-Fn-Eeb"/>
+                    <constraint firstItem="tUK-qX-NIG" firstAttribute="top" secondItem="4Tf-qD-CEA" secondAttribute="bottom" constant="6" id="uNx-TT-X8T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="tUK-qX-NIG" id="jXm-ck-WJv"/>
+                <outlet property="ballView" destination="xRc-DF-VHx" id="8Ft-RJ-DLc"/>
+                <outlet property="dateLabel" destination="4Tf-qD-CEA" id="P5P-U5-8Al"/>
+                <outlet property="line" destination="L5j-xJ-cEs" id="p2x-iN-7dJ"/>
+                <outlet property="lineTop" destination="6KW-Pr-jhb" id="7os-Y3-xTN"/>
+                <outlet property="monthLabel" destination="SiQ-hm-M9K" id="YEZ-30-rcI"/>
+                <outlet property="smallBall" destination="roW-Rh-rJz" id="jSW-Zk-tjn"/>
+                <outlet property="title" destination="vjP-oN-KOj" id="4P3-4n-gAk"/>
+                <outlet property="titleLeftConstraint" destination="H09-4W-WxH" id="oHH-bY-RrR"/>
+            </connections>
+            <point key="canvasLocation" x="378" y="267"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="RobotoSlab-Regular.ttf">
+            <string>RobotoSlab-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ApplyJKCell" rowHeight="92" id="KGk-i7-Jjw" customClass="ApplyJKCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="91.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zf3-VX-7sE">
+                        <rect key="frame" x="12" y="12" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="W4C-Qk-FTB"/>
+                            <constraint firstAttribute="height" constant="40" id="czt-uy-i7W"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-Gr-HaJ">
+                        <rect key="frame" x="60" y="22" width="32" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="aTr-8K-oSI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日期" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="xO4-mV-IeB">
+                        <rect key="frame" x="35" y="60" width="533" height="19"/>
+                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="13"/>
+                        <color key="textColor" red="0.3529411764705882" green="0.3529411764705882" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="简历被查看" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aph-5x-W4V">
+                        <rect key="frame" x="504" y="23" width="80" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="OOL-UL-bV4"/>
+                            <constraint firstAttribute="width" constant="80" id="cdy-tv-GgH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.70980392156862748" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="job_xq_data" translatesAutoresizingMaskIntoConstraints="NO" id="AUZ-s0-Nai">
+                        <rect key="frame" x="12" y="60" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="3nD-5O-vcr"/>
+                            <constraint firstAttribute="height" constant="18" id="ayT-Pp-kEm"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="aph-5x-W4V" firstAttribute="centerY" secondItem="Zf3-VX-7sE" secondAttribute="centerY" id="Alc-oY-HEi"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xO4-mV-IeB" secondAttribute="bottom" constant="4" id="GiH-YS-xSZ"/>
+                    <constraint firstItem="xO4-mV-IeB" firstAttribute="leading" secondItem="AUZ-s0-Nai" secondAttribute="trailing" constant="5" id="IYB-Xy-GUc"/>
+                    <constraint firstItem="y7d-Gr-HaJ" firstAttribute="leading" secondItem="Zf3-VX-7sE" secondAttribute="trailing" constant="8" id="OJb-a9-Zsr"/>
+                    <constraint firstItem="y7d-Gr-HaJ" firstAttribute="centerY" secondItem="Zf3-VX-7sE" secondAttribute="centerY" id="PN9-5V-Veb"/>
+                    <constraint firstItem="aph-5x-W4V" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-8" id="QKA-iE-1s0"/>
+                    <constraint firstItem="AUZ-s0-Nai" firstAttribute="leading" secondItem="Zf3-VX-7sE" secondAttribute="leading" id="VXv-9i-H7F"/>
+                    <constraint firstItem="Zf3-VX-7sE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="VYN-qx-ezR"/>
+                    <constraint firstItem="xO4-mV-IeB" firstAttribute="top" secondItem="AUZ-s0-Nai" secondAttribute="top" id="Wev-3E-IF5"/>
+                    <constraint firstItem="AUZ-s0-Nai" firstAttribute="top" secondItem="Zf3-VX-7sE" secondAttribute="bottom" constant="8" id="rpn-FO-Hv1"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xO4-mV-IeB" secondAttribute="trailing" constant="24" id="tW2-HZ-l17"/>
+                    <constraint firstItem="Zf3-VX-7sE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="xWM-MZ-n3n"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="dateLabel" destination="xO4-mV-IeB" id="sMA-ZG-qut"/>
+                <outlet property="iconImageView" destination="Zf3-VX-7sE" id="nD4-S5-sEg"/>
+                <outlet property="nameLabel" destination="y7d-Gr-HaJ" id="XHs-1P-zTd"/>
+                <outlet property="stateLaebl" destination="aph-5x-W4V" id="TWm-bw-An2"/>
+            </connections>
+            <point key="canvasLocation" x="367" y="321"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="job_xq_data" width="24" height="24"/>
+    </resources>
+</document>

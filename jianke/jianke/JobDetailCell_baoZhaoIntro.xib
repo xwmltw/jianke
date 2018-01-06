@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="54" id="4Pn-zv-RMC" customClass="JobDetailCell_baoZhaoIntro">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Pn-zv-RMC" id="OGw-5t-7yY">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v3_job_img_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="mhk-m6-spG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jobPost_icon_bao" translatesAutoresizingMaskIntoConstraints="NO" id="IyB-VX-Mft">
+                        <rect key="frame" x="16" y="12" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="njM-q7-irJ"/>
+                            <constraint firstAttribute="height" constant="16" id="p04-b2-ifN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兼客兼职担保该岗位信息真实可信，工资按时结算，保障兼客用户权益" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="fZs-WS-00w">
+                        <rect key="frame" x="40" y="12" width="544" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.83999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wy2-A3-cKu">
+                        <rect key="frame" x="0.0" y="52" width="600" height="1"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.69999999999999996" id="vSh-3O-M3u"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="wy2-A3-cKu" secondAttribute="bottom" id="6d9-pU-kK4"/>
+                    <constraint firstItem="fZs-WS-00w" firstAttribute="leading" secondItem="IyB-VX-Mft" secondAttribute="trailing" constant="8" id="7tQ-bc-rqZ"/>
+                    <constraint firstItem="mhk-m6-spG" firstAttribute="top" secondItem="OGw-5t-7yY" secondAttribute="top" id="F5b-wl-gyM"/>
+                    <constraint firstAttribute="bottom" secondItem="mhk-m6-spG" secondAttribute="bottom" id="Ga1-FI-Vcn"/>
+                    <constraint firstItem="IyB-VX-Mft" firstAttribute="leading" secondItem="OGw-5t-7yY" secondAttribute="leading" constant="16" id="M1x-dr-M2m"/>
+                    <constraint firstItem="wy2-A3-cKu" firstAttribute="leading" secondItem="OGw-5t-7yY" secondAttribute="leading" id="T5C-En-UJR"/>
+                    <constraint firstItem="mhk-m6-spG" firstAttribute="leading" secondItem="OGw-5t-7yY" secondAttribute="leading" id="XWb-Bt-8av"/>
+                    <constraint firstItem="fZs-WS-00w" firstAttribute="top" secondItem="IyB-VX-Mft" secondAttribute="top" id="Zp3-nv-31p"/>
+                    <constraint firstAttribute="trailing" secondItem="fZs-WS-00w" secondAttribute="trailing" constant="16" id="p5k-pd-2Af"/>
+                    <constraint firstAttribute="trailing" secondItem="mhk-m6-spG" secondAttribute="trailing" id="sGK-op-wXh"/>
+                    <constraint firstItem="IyB-VX-Mft" firstAttribute="top" secondItem="OGw-5t-7yY" secondAttribute="top" constant="12" id="xye-nz-luj"/>
+                    <constraint firstAttribute="trailing" secondItem="wy2-A3-cKu" secondAttribute="trailing" id="zHN-Oo-8Ly"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="438" y="329"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="jobPost_icon_bao" width="16" height="16"/>
+        <image name="v3_job_img_shadow" width="375" height="61"/>
+    </resources>
+</document>

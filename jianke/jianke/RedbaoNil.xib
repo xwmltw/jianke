@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="niS-Qd-Zg4" customClass="JobRedBaoView">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="433"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redbagNodataCardBg" translatesAutoresizingMaskIntoConstraints="NO" id="cBT-ok-Y8G" customClass="RedbaoAlert">
+                    <rect key="frame" x="0.0" y="0.0" width="288" height="433"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYp-oX-izS">
+                    <rect key="frame" x="126.5" y="40" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="hA0-u7-GRl"/>
+                        <constraint firstAttribute="height" constant="35" id="qv2-eb-U1m"/>
+                    </constraints>
+                    <state key="normal" image="v3_public_close"/>
+                    <connections>
+                        <action selector="cancelBtn:" destination="niS-Qd-Zg4" eventType="touchUpInside" id="jls-cf-N6P"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="运气这么好，明天接着领咯~" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXf-9h-ZEg">
+                    <rect key="frame" x="28" y="301" width="232" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.5490196078431373" green="0.14901960784313725" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您今天的红包额已领完" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH5-4A-IT5">
+                    <rect key="frame" x="10" y="271" width="268" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.9882352941176471" green="0.90588235294117647" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cBT-ok-Y8G" secondAttribute="bottom" id="5mf-5V-FEE"/>
+                <constraint firstItem="rYp-oX-izS" firstAttribute="top" secondItem="niS-Qd-Zg4" secondAttribute="top" constant="40" id="75e-nH-6gB"/>
+                <constraint firstItem="rYp-oX-izS" firstAttribute="centerX" secondItem="niS-Qd-Zg4" secondAttribute="centerX" id="9Db-7a-Ksv"/>
+                <constraint firstItem="cBT-ok-Y8G" firstAttribute="leading" secondItem="niS-Qd-Zg4" secondAttribute="leading" id="A3x-tb-YZC"/>
+                <constraint firstAttribute="trailing" secondItem="cBT-ok-Y8G" secondAttribute="trailing" id="ANs-WS-uwi"/>
+                <constraint firstItem="IH5-4A-IT5" firstAttribute="leading" secondItem="niS-Qd-Zg4" secondAttribute="leading" constant="10" id="BPc-Wc-XhK"/>
+                <constraint firstItem="cBT-ok-Y8G" firstAttribute="top" secondItem="niS-Qd-Zg4" secondAttribute="top" id="KNM-oY-lAE"/>
+                <constraint firstAttribute="trailing" secondItem="LXf-9h-ZEg" secondAttribute="trailing" constant="28" id="MPr-hy-zkg"/>
+                <constraint firstAttribute="trailing" secondItem="IH5-4A-IT5" secondAttribute="trailing" constant="10" id="arf-zX-FwW"/>
+                <constraint firstItem="LXf-9h-ZEg" firstAttribute="centerX" secondItem="niS-Qd-Zg4" secondAttribute="centerX" id="gWh-JM-uaO"/>
+                <constraint firstItem="LXf-9h-ZEg" firstAttribute="leading" secondItem="niS-Qd-Zg4" secondAttribute="leading" constant="28" id="hvd-fI-Fy1"/>
+                <constraint firstItem="IH5-4A-IT5" firstAttribute="centerX" secondItem="niS-Qd-Zg4" secondAttribute="centerX" id="sW9-ui-jcC"/>
+                <constraint firstItem="IH5-4A-IT5" firstAttribute="top" secondItem="niS-Qd-Zg4" secondAttribute="centerY" multiplier="5:4" id="u6M-cG-NZF"/>
+                <constraint firstItem="LXf-9h-ZEg" firstAttribute="top" secondItem="IH5-4A-IT5" secondAttribute="bottom" constant="8" id="xTx-0Y-6ah"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelLayout" destination="75e-nH-6gB" id="4Vv-cP-7Ao"/>
+                <outlet property="labContent" destination="LXf-9h-ZEg" id="IWr-m5-16K"/>
+                <outlet property="labTitle" destination="IH5-4A-IT5" id="IPA-YV-A8V"/>
+            </connections>
+            <point key="canvasLocation" x="-96" y="-232.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="redbagNodataCardBg" width="292" height="433"/>
+        <image name="v3_public_close" width="28" height="28"/>
+    </resources>
+</document>
