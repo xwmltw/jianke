@@ -10,7 +10,6 @@
 #import "JobModel.h"
 #import "WDConst.h"
 #import "UIImageView+WebCache.h"
-
 @interface JobExpressCell(){
     JobModel* _jobModel;
     
@@ -39,6 +38,7 @@
 @property (nonatomic, strong) UIButton *btnCloseSSP;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *layoutTitleRight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *layoutImgIconBotton;
+@property (weak, nonatomic) IBOutlet UIView *fullView;
 
 @end
 
@@ -47,6 +47,8 @@
 + (instancetype)cellWithTableView:(UITableView *)tableView{
     static NSString *identifier = @"JobExpressCell";
     JobExpressCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.fullView.layer.borderWidth = 0.5;
+    cell.fullView.layer.borderColor = [MKCOLOR_RGB(255, 97, 142)CGColor];
     
     if (!cell) {
         static UINib* _nib;
@@ -74,7 +76,10 @@
                 self.botLine.hidden = YES;
             }
         }
-        
+        self.fullView.hidden = YES;
+        if (model.today_is_can_apply.integerValue == 0) {
+            self.fullView.hidden = NO;
+        }
         _jobModel = model;
         self.imgHot.hidden = YES;
         self.stcikImg.hidden = YES;
@@ -90,16 +95,15 @@
             self.layoutStickLeft.constant += 29;
             self.layoutImgBaoLeft.constant += 29;
             self.layoutTitleLeft.constant += 29;
-       }
+        }
         if (model.enable_recruitment_service.integerValue == 1) {
-             self.imgBao.hidden = NO;
+            self.imgBao.hidden = NO;
             self.layoutTuiJianLeft.constant +=22;
             self.layoutStickLeft.constant += 22;
-             self.layoutTitleLeft.constant += 22;
+            self.layoutTitleLeft.constant += 22;
         }
         if (model.stick.integerValue == 1) {
             self.stcikImg.hidden = NO;
-            
             self.layoutTuiJianLeft.constant +=22;
             self.layoutTitleLeft.constant += 22;
         }
@@ -189,7 +193,7 @@
         self.salaryGoodIconImg.hidden = YES;
         self.layoutImgIconBotton.constant = 39;
         if (model.guarantee_amount_status.integerValue == 1) {
-            self.layoutImgIconBotton.constant = 14;
+            self.layoutImgIconBotton.constant = 64;
             self.salaryGoodIconImg.hidden = NO;
         }
     }

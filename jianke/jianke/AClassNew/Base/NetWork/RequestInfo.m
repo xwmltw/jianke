@@ -101,7 +101,7 @@
     NSString *sessionId = [[XSJSessionMgr sharedInstance] getLatestSessionId];
     NSString *jsonString;
 
-    NSString *platformStr = [NSString stringWithFormat:@"\"access_channel_code\":\"%@\",\"client_type\":\"%@\",\"app_version_code\":\"%d\",\"package_name\":\"%@\"", JKAPP_PLATFORM, [XSJUserInfoData getClientType],[MKDeviceHelper getAppIntVersion], [MKDeviceHelper getBundleIdentifier]];
+    NSString *platformStr = [NSString stringWithFormat:@"\"access_channel_code\":\"%@\",\"client_type\":\"%@\",\"app_version_code\":\"%d\",\"package_name\":\"%@\",\"product_type\":\"%@\"", JKAPP_PLATFORM, [XSJUserInfoData getClientType],[MKDeviceHelper getAppIntVersion], [MKDeviceHelper getBundleIdentifier],[XSJUserInfoData getProductType]];
     
     NSMutableString *contenStr;
     if (self.content && ![self.content isEqualToString:@""]) {

@@ -87,6 +87,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    JobModel *model = [self.dataSource objectAtIndex:indexPath.row];
+    if(model.today_is_can_apply.integerValue == 0){
+        return 133;
+    }
     return 94;
 }
 

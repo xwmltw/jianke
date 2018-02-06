@@ -356,9 +356,9 @@
 - (void)setupData{
     self.jobModel = self.jobDetailModel.parttime_job;
 
-//    if (self.jobModel.is_show_red_packets == 1) {
-//        [self redbaoView];
-//    }
+    if (self.jobModel.today_is_can_apply.integerValue == 0) {
+        self.tableView.tableHeaderView = [self creatHeader];
+    }
     
     
     // 企业认证状态
@@ -591,6 +591,24 @@
 }
 
 #pragma mark - UITableView delegate
+- (UIView *)creatHeader{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 52)];
+    view.backgroundColor = MKCOLOR_RGBA(255, 97, 142, 0.08);
+    view.layer.borderWidth = 0.5;
+    view.layer.borderColor = [MKCOLOR_RGB(255, 97, 142)CGColor];
+    
+    UILabel *lab = [[UILabel alloc]init];
+    [lab setText:@"今日报名已满。可先收藏岗位，明日再来~"];
+    [lab setFont:[UIFont fontWithName:@"PingFangSC-Medium" size:14]];
+    [lab setTextColor:MKCOLOR_RGB(255, 97, 142)];
+    [view addSubview:lab];
+    
+    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(view).offset(16);
+        make.centerY.mas_equalTo(view);
+    }];
+    return view;
+}
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     JDCellType sectionType = [self getSectionTypeWithIndexPath:indexPath];
@@ -1840,8 +1858,8 @@
 - (void)checkApplyJob{
     // 有报名限制就进入报名限制页面
     if ([self isSetCondition] && !self.isFromQrScan) {
-        NSString *startDateStr = [DateHelper getDateFromTimeNumber:@(self.jobDetailModel.parttime_job.work_time_start.longValue * 1000)];
-        NSString *endDateStr = [DateHelper getDateFromTimeNumber:@(self.jobDetailModel.parttime_job.work_time_end.longValue * 1000)];
+        NSString *startDateStr = [DateHelper getDateFromTimeNumber:@(self.jobDetailModel.parttime_job.working_time_start_date.longValue * 1000)];
+        NSString *endDateStr = [DateHelper getDateFromTimeNumber:@(self.jobDetailModel.parttime_job.working_time_end_date.longValue * 1000)];
         
         if ([startDateStr isEqualToString:endDateStr]) { // 只有一天
             [self goToConditionVcWithCalendar:YES];

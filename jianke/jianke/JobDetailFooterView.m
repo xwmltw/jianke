@@ -177,12 +177,16 @@
                     [self.btnApply setTitle:@"已取消报名" forState:UIControlStateNormal];
                 }
             } else {
+                self.btnApply.enabled = YES;
                 if (jobModel.job_type && jobModel.job_type.integerValue == 2) { // 抢单兼职
                     [self.btnApply setTitle:@"立即抢单" forState:UIControlStateNormal];
-                } else { // 普通兼职
+                } else if(jobModel.today_is_can_apply.integerValue == 0){ // 普通兼职
+                    [self.btnApply setTitle:@"报名" forState:UIControlStateNormal];
+                    self.btnApply.enabled = NO;
+                }else{
                     [self.btnApply setTitle:@"报名" forState:UIControlStateNormal];
                 }
-                self.btnApply.enabled = YES;
+                
             }
         }else{
             if (jobModel.status.intValue == 1) { // 待审核
@@ -208,6 +212,9 @@
                     if (jobModel.has_been_filled.intValue == 0) {
                         if (jobModel.is_fit_job_limit.integerValue == 0 && jobModel.fit_job_limit_desc.length) {
                             [self.btnApply setTitle:jobModel.fit_job_limit_desc forState:UIControlStateNormal];
+                            self.btnApply.enabled = NO;
+                        }else if(jobModel.today_is_can_apply.integerValue == 0){ // 普通兼职
+                            [self.btnApply setTitle:@"报名" forState:UIControlStateNormal];
                             self.btnApply.enabled = NO;
                         }else{
                             [self.btnApply setTitle:@"报名" forState:UIControlStateNormal];

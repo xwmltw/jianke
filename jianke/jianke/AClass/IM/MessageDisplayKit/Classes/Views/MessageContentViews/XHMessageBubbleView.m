@@ -558,6 +558,7 @@ const CGFloat kXHtimeLabelHeight = 20; /*!< 时间宽度 */
                 case WdSystemNoticeType_ServicePersonalAuditPass:   //个人服务申请审核通过
                 case WdSystemNoticeType_AgreeServicePersonalInvite:      // 89:兼客同意个人服务邀约
                 case WdSystemNoticeType_ApplyServiceTeam:       // 90:雇主预约团队服务
+                case WdSystemNoticeType_JobApplyFull:               //岗位已报满
 
                     bUnderLing = NO;
                     break;
@@ -566,7 +567,7 @@ const CGFloat kXHtimeLabelHeight = 20; /*!< 时间宽度 */
                 case WdSystemNoticeType_EpPayNotification:          //系统给雇主发送付款提醒
                 case WdSystemNoticeType_GetApplyFitst:              //获得首个报名
                 case WdSystemNoticeType_GetSnagFitst:               //获得首个抢单
-                case WdSystemNoticeType_JobApplyFull:               //岗位已报满
+                
                 case WdSystemNoticeType_JobSnagEnd:                 //岗位已抢完
                 case WdSystemNoticeType_JkWorkTomorrow:             //系统提醒兼客明天上岗
                 case WdSystemNoticeType_JkMoneyAdd:                 //系统给兼客发的到账提醒

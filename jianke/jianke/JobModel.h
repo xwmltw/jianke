@@ -159,8 +159,8 @@
 @property (nonatomic, copy) NSString *wechat_number;    /*!< 微信号 */
 //v3.2.5.2
 @property (nonatomic, assign) BOOL is_show_red_packets; /*!<是否显示红包 1：是 0：否*/
-
-
+//v330.2
+@property (nonatomic, copy) NSNumber *today_is_can_apply; /*!<岗位今日是否可以申请 1：是 0：否*/
 // v2.4
 @property (nonatomic, assign, getter=isReaded) BOOL readed; /*!< 是否已读, 本地字段 */
 - (void)checkReadStateWithReadedJobIdArray:(NSArray *)jobIdArray; /*!< 判断是否已读,并设置相应字段readed */
