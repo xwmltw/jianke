@@ -231,23 +231,23 @@
                 [weakSelf.arrayData addObject:obj];
             }
             
-            if(globaModel.is_need_hide_limit_job.integerValue == 1 ){
-                
-                    //隐藏部分兼职
-                    NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet];
-                    for (int i = 0; i < weakSelf.arrayData.count; i++) {
-                       id model = weakSelf.arrayData[i];
-                        if ([model isKindOfClass:[JobModel class]]) {
-                            JobModel *jModel = model;
-                            if (jModel.job_type.integerValue == 5) {
-                                [indexs addIndex:i];
-                            }
-                        }
-                        
-                    }
-                    [weakSelf.arrayData removeObjectsAtIndexes:indexs];
-         
-            }
+//            if(globaModel.is_need_hide_limit_job.integerValue == 1 ){
+//
+//                    //隐藏部分兼职
+//                    NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet];
+//                    for (int i = 0; i < weakSelf.arrayData.count; i++) {
+//                       id model = weakSelf.arrayData[i];
+//                        if ([model isKindOfClass:[JobModel class]]) {
+//                            JobModel *jModel = model;
+//                            if (jModel.job_type.integerValue == 5) {
+//                                [indexs addIndex:i];
+//                            }
+//                        }
+//
+//                    }
+//                    [weakSelf.arrayData removeObjectsAtIndexes:indexs];
+//
+//            }
             
             
             //插入广告
@@ -281,23 +281,23 @@
                 adModel.isSSPAd = YES;
             }
             
-            if(globaModel.is_need_hide_limit_job.integerValue == 1 ){
-                
-                //隐藏部分兼职
-                NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet];
-                for (int i = 0; i < weakSelf.arrayData.count; i++) {
-                    id model = weakSelf.arrayData[i];
-                    if ([model isKindOfClass:[JobModel class]]) {
-                        JobModel *jModel = model;
-                        if (jModel.job_type.integerValue == 5) {
-                            [indexs addIndex:i];
-                        }
-                    }
-                    
-                }
-                [weakSelf.arrayData removeObjectsAtIndexes:indexs];
-                
-            }
+//            if(globaModel.is_need_hide_limit_job.integerValue == 1 ){
+//                
+//                //隐藏部分兼职
+//                NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet];
+//                for (int i = 0; i < weakSelf.arrayData.count; i++) {
+//                    id model = weakSelf.arrayData[i];
+//                    if ([model isKindOfClass:[JobModel class]]) {
+//                        JobModel *jModel = model;
+//                        if (jModel.job_type.integerValue == 5) {
+//                            [indexs addIndex:i];
+//                        }
+//                    }
+//                    
+//                }
+//                [weakSelf.arrayData removeObjectsAtIndexes:indexs];
+//                
+//            }
             
             //插入广告
             if(globaModel.job_list_ad_1 && weakSelf.arrayData.count > 3){

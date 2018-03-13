@@ -110,23 +110,23 @@
 //                }
 //                [weakSelf.dataSource removeObjectsAtIndexes:indexs];
 //            }
-            if(globaModel.is_need_hide_limit_job.integerValue == 1 ){
-                
-                //隐藏部分兼职
-                NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet];
-                for (int i = 0; i < weakSelf.dataSource.count; i++) {
-                    id model = weakSelf.dataSource[i];
-                    if ([model isKindOfClass:[JobModel class]]) {
-                        JobModel *jModel = model;
-                        if (jModel.job_type.integerValue == 5) {
-                            [indexs addIndex:i];
-                        }
-                    }
-                    
-                }
-                [weakSelf.dataSource removeObjectsAtIndexes:indexs];
-                
-            }
+//            if(globaModel.is_need_hide_limit_job.integerValue == 1 ){
+//                
+//                //隐藏部分兼职
+//                NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet];
+//                for (int i = 0; i < weakSelf.dataSource.count; i++) {
+//                    id model = weakSelf.dataSource[i];
+//                    if ([model isKindOfClass:[JobModel class]]) {
+//                        JobModel *jModel = model;
+//                        if (jModel.job_type.integerValue == 5) {
+//                            [indexs addIndex:i];
+//                        }
+//                    }
+//                    
+//                }
+//                [weakSelf.dataSource removeObjectsAtIndexes:indexs];
+//                
+//            }
 
             [weakSelf.tableView reloadData];
         }
@@ -156,23 +156,23 @@
 //                    [weakSelf.dataSource removeObjectsAtIndexes:indexs];
 //                }
                 
-                if(globaModel.is_need_hide_limit_job.integerValue == 1 ){
-                    
-                    //隐藏部分兼职
-                    NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet];
-                    for (int i = 0; i < weakSelf.dataSource.count; i++) {
-                        id model = weakSelf.dataSource[i];
-                        if ([model isKindOfClass:[JobModel class]]) {
-                            JobModel *jModel = model;
-                            if (jModel.job_type.integerValue == 5) {
-                                [indexs addIndex:i];
-                            }
-                        }
-                        
-                    }
-                    [weakSelf.dataSource removeObjectsAtIndexes:indexs];
-                    
-                }
+//                if(globaModel.is_need_hide_limit_job.integerValue == 1 ){
+//
+//                    //隐藏部分兼职
+//                    NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet];
+//                    for (int i = 0; i < weakSelf.dataSource.count; i++) {
+//                        id model = weakSelf.dataSource[i];
+//                        if ([model isKindOfClass:[JobModel class]]) {
+//                            JobModel *jModel = model;
+//                            if (jModel.job_type.integerValue == 5) {
+//                                [indexs addIndex:i];
+//                            }
+//                        }
+//
+//                    }
+//                    [weakSelf.dataSource removeObjectsAtIndexes:indexs];
+//
+//                }
 
                 [weakSelf.tableView reloadData];
             }

@@ -688,11 +688,18 @@
     self.leftTableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:self.leftTableView];
     self.leftTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
-    
+#ifndef iPhoneX
+    [self.leftTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.view).offset(-88);
+    }];
+#else
     [self.leftTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self.view);
         make.top.equalTo(self.view).offset(-64);
     }];
+#endif
+    
     
     _jobExpressVC = nil;
     
@@ -919,7 +926,12 @@
     ELog(@"Jk====msgCount:%@",msgCount);
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        UITabBarItem *item = [self.tabBarController.tabBar.items objectAtIndex:2];
+        ClientGlobalInfoRM *globalInfoRM = [[XSJRequestHelper sharedInstance] getClientGlobalModel];
+        UITabBarItem *item;
+        if (globalInfoRM.is_not_support_zhong_bao.integerValue != 1) {
+            //tabbar红点
+            item = [self.tabBarController.tabBar.items objectAtIndex:1];
+        }
         
         if (msgCount.intValue <= 0) {
             item.badgeValue = nil;

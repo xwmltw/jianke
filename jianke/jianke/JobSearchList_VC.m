@@ -188,23 +188,23 @@
 //                    weakSelf.jobListTableView.hidden = NO;
 //                    [weakSelf.jobListTableView reloadData];
                 }
-                if(globaModel.is_need_hide_limit_job.integerValue == 1 ){
-                    
-                    //隐藏部分兼职
-                    NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet];
-                    for (int i = 0; i < _searchDatasArray.count; i++) {
-                        id model = _searchDatasArray[i];
-                        if ([model isKindOfClass:[JobModel class]]) {
-                            JobModel *jModel = model;
-                            if (jModel.job_type.integerValue == 5) {
-                                [indexs addIndex:i];
-                            }
-                        }
-                        
-                    }
-                    [_searchDatasArray removeObjectsAtIndexes:indexs];
-                    
-                }
+//                if(globaModel.is_need_hide_limit_job.integerValue == 1 ){
+//                    
+//                    //隐藏部分兼职
+//                    NSMutableIndexSet *indexs = [NSMutableIndexSet indexSet];
+//                    for (int i = 0; i < _searchDatasArray.count; i++) {
+//                        id model = _searchDatasArray[i];
+//                        if ([model isKindOfClass:[JobModel class]]) {
+//                            JobModel *jModel = model;
+//                            if (jModel.job_type.integerValue == 5) {
+//                                [indexs addIndex:i];
+//                            }
+//                        }
+//                        
+//                    }
+//                    [_searchDatasArray removeObjectsAtIndexes:indexs];
+//                    
+//                }
 
             }
         }

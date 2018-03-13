@@ -49,12 +49,14 @@ Impl_SharedInstance(MainTabBarCtlMgr);
     NSArray *tabbarCtrls;
     
     ClientGlobalInfoRM *globalInfoRM = [[XSJRequestHelper sharedInstance] getClientGlobalModel];
+    if(globalInfoRM.is_not_support_zhong_bao.integerValue != 1){
+        
     
-    ZBHome_VC *vc2 = [[ZBHome_VC  alloc] init];
-    MainNavigation_VC *nav2 = [[MainNavigation_VC alloc] initWithRootViewController:vc2];
-    nav2.tabBarItem.title = @"任务";
-    nav2.tabBarItem.image = [UIImage imageNamed:@"home_tabbar_ZB_2_1"];
-    nav2.tabBarItem.selectedImage = [[UIImage imageNamed:@"home_tabbar_ZB_2_0"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        ZBHome_VC *vc2 = [[ZBHome_VC  alloc] init];
+        MainNavigation_VC *nav2 = [[MainNavigation_VC alloc] initWithRootViewController:vc2];
+        nav2.tabBarItem.title = @"任务";
+        nav2.tabBarItem.image = [UIImage imageNamed:@"home_tabbar_ZB_2_1"];
+        nav2.tabBarItem.selectedImage = [[UIImage imageNamed:@"home_tabbar_ZB_2_0"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
         IMHome_VC *vc3 = [[IMHome_VC  alloc] init];
         MainNavigation_VC *nav3 = [[MainNavigation_VC alloc] initWithRootViewController:vc3];
@@ -70,10 +72,26 @@ Impl_SharedInstance(MainTabBarCtlMgr);
         nav4.tabBarItem.image = [UIImage imageNamed:@"home_tabbar_4_0"];
         nav4.tabBarItem.selectedImage = [[UIImage imageNamed:@"home_tabbar_4_1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [nav4.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor XSJColor_tGrayDeepTinge]} forState:UIControlStateSelected];
-        
+    
         tabbarCtrls = @[nav1, nav2,nav3, nav4];
     
-    
+    }else{
+        IMHome_VC *vc3 = [[IMHome_VC  alloc] init];
+        MainNavigation_VC *nav3 = [[MainNavigation_VC alloc] initWithRootViewController:vc3];
+        nav3.tabBarItem.title = @"消息";
+        nav3.tabBarItem.image = [UIImage imageNamed:@"home_tabbar_3_0"];
+        nav3.tabBarItem.selectedImage = [[UIImage imageNamed:@"home_tabbar_3_1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [nav3.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor XSJColor_tGrayDeepTinge]} forState:UIControlStateSelected];
+        
+        
+        MyNewInfo_VC *vc4 = [[MyNewInfo_VC  alloc] init];
+        MainNavigation_VC *nav4 = [[MainNavigation_VC alloc] initWithRootViewController:vc4];
+        nav4.tabBarItem.title = @"我";
+        nav4.tabBarItem.image = [UIImage imageNamed:@"home_tabbar_4_0"];
+        nav4.tabBarItem.selectedImage = [[UIImage imageNamed:@"home_tabbar_4_1"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [nav4.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor XSJColor_tGrayDeepTinge]} forState:UIControlStateSelected];
+        tabbarCtrls = @[nav1,nav3, nav4];
+    }
     self.rootTabbarCtl.viewControllers = nil;
     if (self.rootTabbarCtl.presentedViewController) {
         [self.rootTabbarCtl dismissViewControllerAnimated:NO completion:nil];
